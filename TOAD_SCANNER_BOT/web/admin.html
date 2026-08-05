@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TOAD Admin</title>
+
+    <link rel="stylesheet" href="/web/admin.css">
+</head>
+
+<body>
+
+<div class="page">
+
+    <header>
+        <div class="logo">
+            🐸 TOAD ADMIN
+        </div>
+
+        <button
+            id="logoutButton"
+            class="logout hidden"
+        >
+            ВЫЙТИ
+        </button>
+    </header>
+
+
+    <!-- LOGIN -->
+
+    <section
+        id="loginView"
+        class="login-card"
+    >
+
+        <div class="tag">
+            SECURE AREA
+        </div>
+
+        <h1>
+            Admin Panel
+        </h1>
+
+        <p>
+            Введите административный ключ.
+        </p>
+
+        <form id="loginForm">
+
+            <input
+                id="secretInput"
+                type="password"
+                placeholder="Admin secret"
+                autocomplete="current-password"
+            >
+
+            <button type="submit">
+                ВОЙТИ
+            </button>
+
+        </form>
+
+        <div
+            id="loginError"
+            class="error hidden"
+        ></div>
+
+    </section>
+
+
+    <!-- DASHBOARD -->
+
+    <section
+        id="dashboardView"
+        class="dashboard hidden"
+    >
+
+        <div class="dashboard-head">
+
+            <div>
+                <div class="tag">
+                    MODERATION CENTER
+                </div>
+
+                <h1>
+                    TOAD Scanner
+                </h1>
+            </div>
+
+            <button
+                id="refreshButton"
+                class="secondary"
+            >
+                ↻ ОБНОВИТЬ
+            </button>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat">
+                <span>На модерации</span>
+                <strong id="pendingCount">0</strong>
+            </div>
+
+        </div>
+
+
+        <h2>
+            Новые жалобы
+        </h2>
+
+        <div
+            id="reports"
+            class="reports"
+        ></div>
+
+
+        <div
+            id="emptyState"
+            class="empty hidden"
+        >
+            ✅ Жалоб на модерации нет
+        </div>
+
+
+        <div
+            id="dashboardError"
+            class="error hidden"
+        ></div>
+
+    </section>
+
+</div>
+
+
+<script src="/web/admin.js"></script>
+
+</body>
+</html>

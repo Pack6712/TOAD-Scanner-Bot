@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TOAD Dossier</title>
+
+    <link rel="stylesheet" href="/web/style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <span class="frog">🐸</span>
+        TOAD SCANNER
+    </div>
+
+    <a
+        href="/scanner"
+        style="
+            color:#42ff7d;
+            text-decoration:none;
+            font-size:12px;
+            font-weight:bold;
+        "
+    >
+        ← НАЗАД К ПОИСКУ
+    </a>
+
+</header>
+
+
+<main class="container">
+
+    <section class="hero">
+
+        <div class="badge">
+            TOAD DOSSIER
+        </div>
+
+
+        <div id="loading">
+            Загружаем досье...
+        </div>
+
+
+        <div
+            id="error"
+            class="error hidden"
+        ></div>
+
+
+        <section
+            id="entity"
+            class="result-card hidden"
+        >
+
+            <div class="result-top">
+
+                <div>
+
+                    <div class="label">
+                        ACCOUNT
+                    </div>
+
+                    <h2 id="username">
+                        @username
+                    </h2>
+
+                    <div
+                        id="displayName"
+                        class="display-name"
+                    ></div>
+
+                </div>
+
+
+                <div class="risk-block">
+
+                    <span class="label">
+                        RISK SCORE
+                    </span>
+
+                    <strong id="riskScore">
+                        0
+                    </strong>
+
+                    <span class="risk-max">
+                        /100
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="risk-line">
+
+                <div
+                    id="riskProgress"
+                    class="risk-progress"
+                ></div>
+
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <span>Досье</span>
+
+                    <strong id="entityId">
+                        #0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span>Жалоб</span>
+
+                    <strong id="reportsCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span>Статус</span>
+
+                    <strong id="status">
+                        ACTIVE
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="identifiersBlock"
+                style="margin-top:30px;"
+            >
+
+                <div class="label">
+                    IDENTIFIERS
+                </div>
+
+                <div
+                    id="identifiers"
+                    style="
+                        margin-top:15px;
+                        display:grid;
+                        gap:10px;
+                    "
+                ></div>
+
+            </div>
+
+
+            <div
+                style="margin-top:35px;"
+            >
+
+                <div class="label">
+                    APPROVED REPORTS
+                </div>
+
+                <div
+                    id="reports"
+                    style="
+                        margin-top:15px;
+                        display:grid;
+                        gap:15px;
+                    "
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <div class="warning">
+
+            TOAD Scanner отображает сведения
+            из модерируемых пользовательских жалоб.
+
+            Информация используется
+            как справочный индикатор риска
+            и не является судебным решением
+            или официальным установлением вины.
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="/web/entity.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TOAD Scanner</title>
+
+    <link rel="stylesheet" href="/web/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <span class="frog">🐸</span>
+        TOAD SCANNER
+    </div>
+
+    <div class="api-status">
+        <span class="status-dot"></span>
+        SYSTEM ONLINE
+    </div>
+</header>
+
+
+<main class="container">
+
+    <section class="hero">
+
+        <div class="badge">
+            TELEGRAM RISK DATABASE
+        </div>
+
+        <h1>
+            Проверяй аккаунты<br>
+            <span>до сделки.</span>
+        </h1>
+
+        <p class="subtitle">
+            Поиск Telegram-аккаунтов по базе
+            модерируемых пользовательских жалоб TOAD Scanner.
+        </p>
+
+
+        <form id="searchForm" class="search-box">
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="@username"
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                ПРОВЕРИТЬ
+            </button>
+
+        </form>
+
+
+        <div id="loading" class="loading hidden">
+            Проверяем базу...
+        </div>
+
+
+        <div id="error" class="error hidden"></div>
+
+
+        <section id="result" class="result-card hidden">
+
+            <div class="result-top">
+
+                <div>
+                    <div class="label">
+                        TELEGRAM ACCOUNT
+                    </div>
+
+                    <h2 id="resultUsername">
+                        @username
+                    </h2>
+
+                    <div
+                        id="resultName"
+                        class="display-name"
+                    ></div>
+                </div>
+
+
+                <div class="risk-block">
+
+                    <span class="label">
+                        RISK SCORE
+                    </span>
+
+                    <strong id="riskScore">
+                        0
+                    </strong>
+
+                    <span class="risk-max">
+                        /100
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="risk-line">
+                <div
+                    id="riskProgress"
+                    class="risk-progress"
+                ></div>
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat">
+                    <span>Досье</span>
+                    <strong id="entityId">#0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Жалоб</span>
+                    <strong id="reportsCount">0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Статус</span>
+                    <strong id="entityStatus">
+                        ACTIVE
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <button
+                id="openEntity"
+                class="entity-button"
+                type="button"
+            >
+                ОТКРЫТЬ ДОСЬЕ →
+            </button>
+
+        </section>
+
+
+        <div class="warning">
+            TOAD Scanner отображает информацию из
+            модерируемых пользовательских жалоб.
+            Наличие записи не является судебным решением
+            или официальным установлением факта мошенничества.
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    TOAD SCANNER • DATABASE SYSTEM
+</footer>
+
+
+<script src="/web/app.js"></script>
+
+</body>
+</html>
